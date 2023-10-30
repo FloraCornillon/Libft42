@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	int num = -45893211;
+	int num = -1;
 	char *result = ft_itoa(num);
 	printf("%s\n", result);
 	free(result);
