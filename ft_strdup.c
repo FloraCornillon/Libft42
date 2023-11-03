@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 14:35:00 by fcornill          #+#    #+#             */
-/*   Updated: 2023/10/31 14:41:25 by fcornill         ###   ########.fr       */
+/*   Created: 2023/10/23 11:01:55 by fcornill          #+#    #+#             */
+/*   Updated: 2023/11/01 15:38:42 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+static char	*ft_strcpy(char *dst, const char *src)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (!s || !f)
-		return ;
-	while (s[i])
+	while (src[i])
 	{
-		f(i, &s[i]);
+		dst[i] = src[i];
 		i++;
 	}
+	dst[i] = '\0';
+	return (dst);
+}
+
+char	*ft_strdup(const char *s1)
+{
+	char	*s_dup;
+	size_t	len;
+
+	if (s1 == NULL)
+		return (NULL);
+	len = ft_strlen(s1) + 1;
+	s_dup = malloc(len * sizeof(char));
+	if (s_dup == NULL)
+		return (NULL);
+	ft_strcpy(s_dup, s1);
+	return (s_dup);
 }
