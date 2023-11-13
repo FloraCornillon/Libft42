@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include <unistsd.h>
+#include <unistd.h>
 #include <stdio.h>
 
 int	ft_myputchar(int c)
@@ -17,7 +17,26 @@ int	ft_myputstr(char *s)
 	return (count);
 }
 
-int	ft_myputnbr(long n, base)
+int	ft_myputnbr(long n, int base)
+{
+	int	count;
+	char	*digit;
+
+	digit = "0123456789abcdef";
+	count = 0;
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		return (ft_myputnbr(n * -1, base) + 1);
+	}
+	else if (n < base)
+		return (ft_myputchar(digit[n]));
+	else
+       	{
+		count = ft_myputnbr(n / base, base);
+		return (count + ft_myputnbr(n % base, base));
+	}
+}
 
 int	ft_get_format(char param, va_list ap)
 {
@@ -47,7 +66,7 @@ int	ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format == '%')
-			count += ft_get_format(*format++, ap);
+			count += ft_get_format(*++format, ap);
 		else
 			count += write(1, format, 1);
 		format++;
@@ -56,4 +75,13 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 				
+int	main(void)
+{
+	int	count;
 	
+	//count = ft_printf("salut, %s\n", "Flora");
+	count = ft_printf("%x\n", -18);
+	printf("%d chars\n", count);
+	printf("%x\n", -18);
+}
+		
