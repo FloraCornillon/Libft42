@@ -2,6 +2,8 @@
 
 This is the first project at 42 school. The goal is to code our own function library, so that we can use it in our future projects.
 
+You can find the project subject [here](./fr.subject.pdf).
+
 ## How to Use
 
 Clone the repository and compile the library:
