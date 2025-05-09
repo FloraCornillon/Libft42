@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:04:06 by fcornill          #+#    #+#             */
-/*   Updated: 2023/10/31 16:32:02 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:18:59 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)

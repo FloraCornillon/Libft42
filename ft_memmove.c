@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:15:13 by fcornill          #+#    #+#             */
-/*   Updated: 2023/10/24 16:56:21 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:19:03 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

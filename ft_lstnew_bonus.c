@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:11:47 by fcornill          #+#    #+#             */
-/*   Updated: 2023/11/02 15:34:02 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:18:42 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

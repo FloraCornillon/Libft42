@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:33:28 by fcornill          #+#    #+#             */
-/*   Updated: 2023/11/03 16:02:39 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:18:37 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
-	t_list	*current;
 	t_list	*new_elem;
-	void	*new_content;
+	void	*new_content;	
 
-	if (!f || !del)
+	if (!f || !del || !lst)
 		return (NULL);
 	new_list = NULL;
-	current = lst;
-	while (current)
+	while (lst)
 	{
-		new_content = (*f)(current->content);
+		new_content = f(lst->content);
 		new_elem = ft_lstnew(new_content);
 		if (!new_elem)
 		{
+			del(new_content);
 			ft_lstclear(&new_list, del);
-			return (NULL);
+			return (new_list);
 		}
 		ft_lstadd_back(&new_list, new_elem);
-		current = current->next;
+		lst = lst->next;
 	}
 	return (new_list);
 }

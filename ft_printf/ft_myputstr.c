@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_myputstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 15:18:29 by fcornill          #+#    #+#             */
-/*   Updated: 2024/11/05 13:18:30 by fcornill         ###   ########.fr       */
+/*   Created: 2023/11/14 13:41:51 by fcornill          #+#    #+#             */
+/*   Updated: 2024/11/05 13:20:54 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	ft_myputstr(char *s)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+	int	count;
+
+	if (s == NULL)
+		return (write(1, "(null)", 6));
+	count = 0;
+	while (*s)
+		count += write(1, s++, 1);
+	return (count);
 }

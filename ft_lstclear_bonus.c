@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:28:25 by fcornill          #+#    #+#             */
-/*   Updated: 2023/11/03 16:50:36 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:18:22 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))

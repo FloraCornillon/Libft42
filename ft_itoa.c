@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:25:59 by fcornill          #+#    #+#             */
-/*   Updated: 2023/11/01 16:55:25 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:18:09 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*ft_strcpy(char *d, char *s)

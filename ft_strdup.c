@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcornill <fcornill@student.42quebec>       +#+  +:+       +#+        */
+/*   By: fcornill <fcornill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:01:55 by fcornill          #+#    #+#             */
-/*   Updated: 2023/11/01 15:38:42 by fcornill         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:07:46 by fcornill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*ft_strcpy(char *dst, const char *src)
